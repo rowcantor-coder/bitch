@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Class Portfolio — One Page</title>
+  <style>
+    :root{ --accent:#6c63ff; --bg:#f6f7fb; --card:#ffffff; --muted:#6b7280; }
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#111}
+    header{background:linear-gradient(90deg,rgba(108,99,255,0.08),transparent);backdrop-filter:blur(4px);position:sticky;top:0;z-index:10}
+    .container{max-width:1000px;margin:0 auto;padding:1rem}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{font-weight:700;color:var(--accent)}
+    .nav-links{display:flex;gap:0.75rem}
+    .nav-links a{padding:0.5rem 0.75rem;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
+    .nav-links a:hover{background:#fff;border:1px solid rgba(0,0,0,0.04);color:#111}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:center;padding:3rem 0}
+    .hero .lead{background:var(--card);padding:2rem;border-radius:12px;box-shadow:0 6px 18px rgba(15,15,30,0.04)}
+    .hero h1{margin:0 0 .5rem;font-size:clamp(1.6rem,3vw,2.4rem)}
+    .hero p{margin:0;color:var(--muted)}
+    .cta{margin-top:1rem;display:flex;gap:.5rem}
+    .btn{background:var(--accent);color:#fff;border:none;padding:.6rem 1rem;border-radius:10px;font-weight:700;text-decoration:none}
+
+    /* About */
+    section{padding:2rem 0}
+    .about .card{display:flex;gap:1rem;align-items:flex-start;padding:1.25rem;background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(15,15,30,0.04)}
+
+    /* Gallery */
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+    .student{background:var(--card);padding:1rem;border-radius:12px;display:flex;gap:0.75rem;align-items:center;box-shadow:0 6px 18px rgba(15,15,30,0.03)}
+    .photo{width:64px;height:64px;border-radius:8px;flex:0 0 64px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#eee;color:#fff;font-weight:700}
+    .student h4{margin:0;font-size:1rem}
+    .student p{margin:0;color:var(--muted);font-size:.9rem}
+
+    footer{padding:2rem 0;color:var(--muted);text-align:center;font-size:.9rem}
+
+    @media (max-width:800px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Class Portfolio</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HOME / HERO -->
+    <section id="home" class="hero" aria-label="Home - hero">
+      <div class="lead">
+        <h1>Welcome to our Class Portfolio</h1>
+        <p>This one-page site showcases our class work: short bios, photos, and each student's dream job. Built with plain HTML &amp; CSS and ready for GitHub Pages.</p>
+        <div class="cta">
+          <a class="btn" href="#gallery">See the Gallery</a>
+          <a class="btn" style="background:transparent;color:var(--accent);border:2px solid var(--accent);" href="#about">About the Class</a>
+        </div>
+      </div>
+      <aside>
+        <img src="/mnt/data/785909f5-8c6a-4f4f-89fe-6ccc835ba3e5.png" alt="Class snapshot or example photo" style="width:320px;height:auto;border-radius:12px;box-shadow:0 12px 30px rgba(17,16,50,0.06);display:block">
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <h2>About this Class</h2>
+      <div class="card">
+        <div>
+          <p style="margin:0 0 .5rem">Course: Web Design & Development — One-page portfolio project.</p>
+          <p style="margin:0;color:var(--muted)">Students were asked to create a one-page portfolio using HTML and CSS. Requirements: a header with links for Home, About, and Gallery; Home must include a hero section; About must describe the class; Gallery must show each student with a photo, name, and dream job. The site will be deployed through GitHub Pages and students will submit the live URL and the GitHub repository link.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+      <p style="color:var(--muted)">Below are sample student cards. Replace names/photos/dream jobs with your class data.</p>
+
+      <div class="gallery-grid">
+        <!-- Student 1 uses the uploaded image -->
+        <div class="student">
+          <div class="photo" style="padding:0;">
+            <img src="/mnt/data/785909f5-8c6a-4f4f-89fe-6ccc835ba3e5.png" alt="Student 1 photo" style="width:64px;height:64px;object-fit:cover;display:block">
+          </div>
+          <div>
+            <h4>Alex Santos</h4>
+            <p>Dream Job: Front-end Developer</p>
+          </div>
+        </div>
+
+        <!-- Student 2: styled avatar placeholder -->
+        <div class="student">
+          <div class="photo" style="background:linear-gradient(135deg,#ffb86b,#ff7aa2);">MB</div>
+          <div>
+            <h4>Maya Bautista</h4>
+            <p>Dream Job: UX Designer</p>
+          </div>
+        </div>
+
+        <!-- Student 3 -->
+        <div class="student">
+          <div class="photo" style="background:linear-gradient(135deg,#7bd389,#3ec5a6);">JR</div>
+          <div>
+            <h4>Jose Ramirez</h4>
+            <p>Dream Job: Software Engineer</p>
+          </div>
+        </div>
+
+        <!-- Student 4 -->
+        <div class="student">
+          <div class="photo" style="background:linear-gradient(135deg,#9aa8ff,#6c63ff);">KL</div>
+          <div>
+            <h4>Karla Lopez</h4>
+            <p>Dream Job: Data Analyst</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>Tip: Save this file as <code>index.html</code> and push to a GitHub repository named <code>your-username.github.io</code> to deploy with GitHub Pages. Submit the live URL and repository link as requested.</p>
+    </footer>
+  </main>
+</body>
+</html>
